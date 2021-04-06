@@ -1,0 +1,515 @@
+/* Fonts */
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Light.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamMedium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamMediumItalic.ttf");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Black.otf");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamBoldItalic.otf");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+/* HEADER */
+.header_container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  background-color: #fdd835;
+  box-shadow: 0 3px 4px rgb(58 46 68 / 20%);
+  border-bottom-color: transparent !important;
+}
+
+.header_navbar {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header_navbar_ul {
+  margin-right: 15px;
+}
+
+.header_navbar_li {
+  list-style-type: none;
+
+  padding-left: .5rem;
+  padding-right: 0 !important;
+}
+
+.header_authentication_btns_container {
+  height: fit-content;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 770px) {
+  .header_navbar_ul {
+    margin-right: 95px;
+  }
+}
+
+/* Button */
+.btn_container {
+  cursor: pointer;
+
+  padding: 10px;
+  
+  border: none;
+  border-radius: 5px;
+  
+  background-color: #5561e2;
+  background-image: linear-gradient(90deg, #5561e2 0, #969eed 50%, #5561e2 100%);
+  background-size: 200%;
+
+  transition: 0.5s;
+}
+
+.btn_background_login {
+  background-image: linear-gradient(90deg, #994FF0 0, #CC79F5 50%, #994FF0 100%);
+}
+
+.btn_background_register {
+  background-image: linear-gradient(90deg, #EB222F 0, #F65316 50%, #EB222F 100%);
+}
+
+.btn_background_upload {
+  background-image: linear-gradient(90deg, #994FF0 0, #CC79F5 50%, #994FF0 100%);
+}
+
+.btn_container:hover {
+  opacity: 0.7;
+}
+
+.btn_container:focus {
+  outline: none;
+}
+
+.btn_text {
+  margin: 0;
+
+  font-family: 'Gotham';
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+/* Page_Content */
+.page_content {
+  height: calc(100vh - 60px);
+  width: 100%;
+
+  margin-top: 60px;
+}
+
+.apresentation_container {
+  height: 400px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("./images/background_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.apresentation_text_title_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.apresentation_text_title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  font-family: "Gotham";
+  font-size: 36px;
+  font-weight: bold;
+
+  color: #0288d1;
+}
+
+.apresentation_text_title_dark {
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  font-family: "Gotham";
+  font-size: 36px;
+  font-weight: bold;
+
+  color: #01579b;
+}
+
+.apresentation_img {
+  height: 40px;
+  width: 40px;
+
+  margin-left: 10px;
+}
+
+.apresentation_text_description {
+  width: 60%;
+  
+  margin: 0;
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-family: 'Gotham';
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #0288d1;
+}
+
+.suggestions_container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  align-content: start;
+}
+
+.search_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular_songs_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular_songs_text {
+  margin: 0;
+  margin-top: 10px;
+
+  text-align: center;
+
+  font-family: 'Gotham';
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .suggestions_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* INPUT */
+.input_container {
+  width: 95%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* width: fit-content; */
+
+  margin: 10px;
+}
+
+.input_field {
+  height: 2.5rem;
+  width: 100%;
+
+  line-height: 26px;
+  padding: .375rem 1rem;
+  
+  border: none;
+
+  background-color: transparent;
+}
+
+.input_field:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.input_icon {
+  color: #838daa;
+  transition: .5s;
+}
+
+/* CARD */
+.cards_grid {
+  width: 100%;
+
+  margin-top: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  gap: 10px;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+
+  width: fit-content;
+}
+
+.card_img {
+  height: 100px;
+  width: 100px;
+}
+
+.card_text_music {
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-family: 'Gotham';
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card_text_artist {
+  margin: 0;
+
+  font-family: 'Gotham';
+  font-size: 12px;
+
+  color: grey;
+}
+
+/* MODAL */
+.modal_display {
+  position: fixed;
+
+  height: 100vh;
+  width: 100%;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.3);
+  transition: 5s;
+}
+
+.close_modal {
+  position: absolute;
+  top: 80px;
+  right: 50px;
+
+  cursor: pointer;
+}
+
+.modal_container {
+  width: 100%;
+  max-width: 430px;
+  /* height: 200px; */
+
+  border-radius: 12px;
+
+  z-index: 1000;
+
+  background-color: #FFF;
+}
+
+.modal_content {
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal_header {
+  height: 90px;
+  width: 100%;
+
+  display: grid;
+  justify-content: center;
+
+  background-color: #5561e2;
+  background-image: url(../../public/assets/images/geo-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border: none;
+  border-radius: 8px;
+}
+
+.modal_header_img {
+  height: 80px;
+  width: 80px;
+  
+  margin-top: 40px;
+  
+  border-radius: 50%;
+}
+
+.modal_content_title {
+  margin-top: 35px;
+
+  font-family: 'Gotham';
+  font-weight: 500;
+  color: #4f515b;
+  font-size: 1.359em;
+  
+  text-align: center;
+}
+
+/* MODAL BUTTON */
+.modal_button_container {
+  width: 100%;
+  min-height: 2.5rem;
+  
+  cursor: pointer;
+  
+  margin-top: 15px;
+  padding: .375rem 2rem;
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  
+  background-color: #5561e2;
+  background-image: linear-gradient(90deg, #5561e2 0, #969eed 50%, #5561e2 100%);
+  background-size: 200%;
+  
+  border: none;
+  border-radius: 10px;
+  
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+
+  box-shadow: 0 1px 2px 0 rgb(85 97 226 / 50%);
+}
+
+.modal_button_container_social_authentication {
+  width: 100%;
+  min-height: 2.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  
+  margin-top: 15px;
+  padding: .375rem 2rem;
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  
+  background-color: #5561e2;
+  background-image: linear-gradient(90deg, #5561e2 0, #969eed 50%, #5561e2 100%);
+  background-size: 200%;
+  
+  border: none;
+  border-radius: 10px;
+  
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+
+  box-shadow: 0 1px 2px 0 rgb(85 97 226 / 50%);
+}
+
+.modal_button_google {
+  background-color: #FFF;
+  background-image: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #333;
+}
+
+.modal_button_img_social_authentication {
+  height: 20px;
+  width: 20px;
+
+  margin-right: 10px;
+}
+
+.modal_button_text {
+  margin: 0;
+
+  text-align: center;
+  font-family: 'Gotham';
+  font-size: 14px;
+
+  color: #FFF;
+}
+
+.modal_button_text_google {
+  margin: 0;
+
+  text-align: center;
+  font-family: 'Gotham';
+  font-size: 14px;
+
+  color: #333;
+}
+
+/* FORM */
+.form {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <title>Single Up</title>
+</head>
+<body>
+  <header class="header_container">
+    <nav class="header_navbar">
+      <ul class="header_navbar_ul">
+        <div class="header_authentication_btns_container">
+          <button class="btn_container btn_background_login" id="login_btn">
+            <p class="btn_text">Login</p>
+          </button>
+
+          <button class="btn_container btn_background_register" id="signin_btn">
+            <p class="btn_text">Sign in</p>
+          </button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="modal_display" id="modal_display">
+    <p class="close_modal" id="close_modal">Close</p>
+
+    <div class="modal_container">
+      <div class="modal_content">
+        <div class="modal_header">
+          <img 
+            class="modal_header_img"
+            src="./images/avatar.png" 
+            alt="avatar">
+        </div>
+
+        <p class="modal_content_title">Log into your account</p>
+      
+        <form class="form">
+          <div class="input_container">
+            <span class="material-icons input_icon">person</span>
+
+            <input 
+              type="text" 
+              class="input_field"
+              placeholder="email"
+            >
+          </div>
+
+          <div class="input_container">
+            <span class="material-icons input_icon">vpn_key</span>
+
+            <input 
+              type="password" 
+              class="input_field"
+              placeholder="password"
+            >
+          </div>
+
+
+          <button class="modal_button_container">
+            <p class="modal_button_text">Log in to your account</p>
+          </button>
+
+          <button class="modal_button_container_social_authentication modal_button_google">
+            <img
+              class="modal_button_img_social_authentication"
+              src="./images/google_icon.svg" 
+              alt="google icon"
+            >
+
+            <p class="modal_button_text_google">Sign in with google</p>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="page_content">
+    <div class="apresentation_container">
+      <div class="apresentation_text_title_container">
+        <h2 class="apresentation_text_title">Single</h2>
+        <h2 class="apresentation_text_title_dark">Up</h2>
+
+        <img
+          class="apresentation_img"
+          src="./images/logo.png" 
+          alt="logo singleup"
+        >
+      </div>
+
+      <button class="btn_container">
+        <p class="btn_text">Sign in</p>
+      </button>
+
+      <p class="apresentation_text_description">LISTEN | CREATE | SHARE</p>
+    </div>
+
+    <div class="suggestions_container">
+      <div class="search_container">
+        <div class="input_container">
+          <span class="material-icons nav_li_icon">search</span>
+    
+          <input 
+            type="text" 
+            class="input_field"
+            placeholder="search"
+          >
+        </div>
+
+        <button class="btn_container btn_background_upload">
+          <p class="btn_text">Upload</p>
+        </button>
+      </div>
+
+      <div class="popular_songs_container">
+        <h5 class="popular_songs_text">Popular Songs</h5>
+
+        <div class="cards_grid">
+          <div class="card_container">
+            <img
+              class="card_img"
+              src="./images/album_example.jpg" 
+              alt="album image"
+            >
+
+            <p class="card_text_music">Music_name</p>
+            <p class="card_text_artist">Artist_name</p>
+          </div>
+
+          <div class="card_container">
+            <img
+              class="card_img"
+              src="./images/album_example.jpg" 
+              alt="album image"
+            >
+
+            <p class="card_text_music">Music_name</p>
+            <p class="card_text_artist">Artist_name</p>
+          </div>
+
+          <div class="card_container">
+            <img
+              class="card_img"
+              src="./images/album_example.jpg" 
+              alt="album image"
+            >
+
+            <p class="card_text_music">Music_name</p>
+            <p class="card_text_artist">Artist_name</p>
+          </div>
+
+          <div class="card_container">
+            <img
+              class="card_img"
+              src="./images/album_example.jpg" 
+              alt="album image"
+            >
+
+            <p class="card_text_music">Music_name</p>
+            <p class="card_text_artist">Artist_name</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>

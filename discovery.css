@@ -1,0 +1,409 @@
+/* Fonts */
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Light.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamMedium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamMediumItalic.ttf");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Black.otf");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/GothamBoldItalic.otf");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+/* HEADER */
+.header_container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  height: 60px;
+  width: 100%;
+
+  margin-left: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  background-color: #fdd835;
+  box-shadow: 0 3px 4px rgb(58 46 68 / 20%);
+  border-bottom-color: transparent !important;
+}
+
+.header_navbar {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header_navbar_ul {
+  margin-right: 15px;
+}
+
+.header_navbar_li {
+  list-style-type: none;
+
+  padding-left: .5rem;
+  padding-right: 0 !important;
+}
+
+.header_authentication_btns_container {
+  height: fit-content;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 770px) {
+  .header_navbar_ul {
+    margin-right: 95px;
+  }
+}
+
+/* INPUT */
+.input_container {
+  width: 95%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* width: fit-content; */
+
+  margin: 10px;
+}
+
+.input_field {
+  height: 2.5rem;
+  width: 100%;
+
+  line-height: 26px;
+  padding: .375rem 1rem;
+  
+  border: none;
+
+  background-color: transparent;
+}
+
+.input_field:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* SIDEBAR */
+.sidebar_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo_container {
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fdd835;
+  /* background-image: linear-gradient(135deg, #4f5261 0%, #383a45 50%); */
+  box-shadow: 0 0px 4px rgb(58 46 68 / 30%);
+}
+
+.logo_img {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+}
+
+.nav_container {
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+
+  background-color: #fdd835;
+  box-shadow: 0 0px 4px rgb(58 46 68 / 30%);
+}
+
+.nav_ul {
+  padding: 0px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.nav_li {
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+.nav_li:hover {
+  cursor: pointer;
+
+  color: black;
+}
+
+.nav_li_icon {
+  color: #838daa;
+  transition: .5s;
+}
+
+.nav_li_icon:hover{
+  color: #007bff;
+  transition: .5s;
+}
+
+/* PAGE CONTENT  */
+.page_container {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.page_content {
+  margin-top: 20px;
+  margin-left: 20px;
+
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.playlists_content {
+  padding-right: 15px;
+
+  border-right: 1px gray solid;
+}
+
+.title {
+  font-size: 24px;
+  color: gray;
+}
+
+.title_suggestions {
+  font-size: 16px;
+  color: gray;
+}
+
+/* ALBUM SUGGESTIONS  */
+.album_container {
+  height: 220px;
+  width: 90%;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-content: center;
+
+  background-color: rgb(92, 92, 92);
+}
+
+.album_img {
+  width: 200px;
+  height: 200px;
+
+  margin-left: 20px;
+}
+
+.album_select_music_container {
+  height: 200px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: auto;
+}
+
+.album_select_music_display{
+  height: 30px;
+  width: 80%;
+
+  cursor: pointer;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  display: flex;
+  flex-direction: row;
+
+  background-color: transparent;
+
+  border-left: none;
+  border-right: none;
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+}
+
+.album_select_music_artist {
+  padding: 0;
+  margin: 0;
+
+  color: gray;
+}
+
+.album_select_music_space_names {
+  padding: 0;
+  margin: 0;
+
+  color: #FFF;
+}
+
+.album_select_music_name {
+  padding: 0;
+  margin: 0;
+
+  color: #FFF;
+}
+
+/* GRID MUSICS */
+.musics_container {
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card_container {
+  min-width: 150px;
+  min-height: 150px;
+
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  text-align: initial;
+  
+  border: none;
+  border-radius: 10px;
+
+  background-color: #333;
+}
+
+.card_title {
+  margin-left: 20px;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  color: #FFF;
+}
+
+/* ARTISTS SUGGESTIONS */
+.artists_content_container {
+  height: calc(100vh - 80px);
+  width: 100%;
+
+  display: grid;
+  /* justify-content: center;
+  align-content: start; */
+
+  /* background-color: rgb(126, 126, 126); */
+}
+
+.artists_container {
+  min-height: 400px;
+  max-height: 500px;
+  min-width: 200px;
+
+  margin-left: 20px;
+  margin-top: 50px;
+
+  overflow: auto;
+
+  border-radius: 20px;
+  border: 1px grey solid;
+
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 1200px) {
+  .artists_container {
+    width: 300px;
+  }
+}
+
+.artists_title {
+  margin-left: 20px;
+
+  font-size: 16px;
+
+  color: grey;
+}
+
+.artist_container {
+  height: 70px;
+  width: 100%;
+
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.artist_img {
+  height: 60px;
+  width: 60px;
+
+  border-radius: 50%;
+}
+
+.artist_name {
+  color: #333;
+
+  margin-left: 10px;
+}
